@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MechicControl : MonoBehaviour
 {
+    public GameObject unityChan;
+
     public Material material = null;
 
     [Range(0, 50)]
@@ -71,7 +73,9 @@ public class MechicControl : MonoBehaviour
         ChangeWeapon();
         CharacterControl_Slerp();
 
-        if(Input.GetKeyDown(KeyCode.LeftShift))
+        unityChan.GetComponent<Animator>().SetFloat("Speed", runSpeed);
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             Mousey[idx_Mousey].GetComponent<Animator>().SetBool("sit", true);
         }

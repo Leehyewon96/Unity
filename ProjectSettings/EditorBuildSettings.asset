@@ -6,27 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Resources/Scenes/00 Start.unity
-    guid: 8797fcbe5b8444c4ca2c7ef1e2188ee2
+    path: Assets/FPS/Scenes/IntroMenu.unity
+    guid: 56e3faabc5bb30f49a68bb8f1292f988
   - enabled: 1
-    path: Assets/Resources/Scenes/Animation.unity
-    guid: 3ce981907c8122243aca0ddbd7f670db
+    path: Assets/FPS/Scenes/WinScene.unity
+    guid: 037d06fbede2b4041a843d9ee6fe750c
   - enabled: 1
-    path: Assets/Resources/Scenes/Spartan_GameEnd.unity
-    guid: 9242ff08856508f4f8b433c01e4512ff
-  - enabled: 0
-    path: Assets/Resources/Scenes/05 FlappyBird 1.unity
-    guid: 8d1d787e6a5c5154e81118f23440df57
-  - enabled: 0
-    path: Assets/Resources/Scenes/GameOver.unity
-    guid: 7b5c66e0d3051ed4e8a4221814c9e640
-  - enabled: 0
-    path: Assets/Resources/Scenes/03 Game.unity
-    guid: 76e091da86c342047b157f744b08a39b
-  - enabled: 0
-    path: Assets/Resources/Scenes/99 End.unity
-    guid: a5efc371c36d174469f7656529874059
-  - enabled: 0
-    path: Assets/Resources/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/FPS/Scenes/LoseScene.unity
+    guid: 72e5c65a45893714484002914e3fd521
+  - enabled: 1
+    path: Assets/FPS/Scenes/MainScene.unity
+    guid: d794a2ef8ba31d847ad3c19d03e2ddb9
   m_configObjects: {}
