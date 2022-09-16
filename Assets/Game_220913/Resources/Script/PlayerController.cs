@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     CharacterController pcController;
 
+    public GameObject Enemy = null;
+
     public GameObject rHand = null;
     public GameObject rFoot = null;
 
@@ -32,12 +34,12 @@ public class PlayerController : MonoBehaviour
     [Range(0, 360)]
     public float rotSpeed = 360.0f;
 
-    
-   
-
     // Start is called before the first frame update
     void Start()
     {
+        GameManager.Instance.init_enemyPos = Enemy.transform.position;
+        GameManager.Instance.init_playerPos = transform.position;
+
         pcController = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody>();
@@ -50,12 +52,20 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ray = new Ray(transform.position, transform.forward);
-        //move();
-        //pointer();
-        CharacterControl();
-        animatorControl();
+        if (GameManager.Instance.gameState == 1)
+        {
+            ray = new Ray(transform.position, transform.forward);
+            //move();
+            //pointer();
+            CharacterControl();
+            animatorControl();
+        }
 
+        if (GameManager.Instance.gameState == 0)
+        {
+            Enemy.transform.position = GameManager.Instance.init_enemyPos;
+            transform.position = GameManager.Instance.init_playerPos;
+        }
     }
 
     private void animatorControl()

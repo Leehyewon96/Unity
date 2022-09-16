@@ -25,22 +25,25 @@ public class EnemyControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if(!attacked)
+        if(GameManager.Instance.gameState == 1)
         {
-            navAgent.destination = player.transform.position;
-            
-        }
-        else
-        {
-            navAgent.destination = transform.position;
-            timer += Time.deltaTime;
-            if (waiting < timer)
+            if (!attacked)
             {
-                timer = 0;
-                attacked = false;
+                navAgent.destination = player.transform.position;
+
+            }
+            else
+            {
+                navAgent.destination = transform.position;
+                timer += Time.deltaTime;
+                if (waiting < timer)
+                {
+                    timer = 0;
+                    attacked = false;
+                }
             }
         }
+        
             
         //animatorControl();
     }

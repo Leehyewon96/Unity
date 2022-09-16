@@ -5,16 +5,34 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/FPS/Scenes/IntroMenu.unity
-    guid: 56e3faabc5bb30f49a68bb8f1292f988
-  - enabled: 1
-    path: Assets/FPS/Scenes/WinScene.unity
-    guid: 037d06fbede2b4041a843d9ee6fe750c
-  - enabled: 1
-    path: Assets/FPS/Scenes/LoseScene.unity
-    guid: 72e5c65a45893714484002914e3fd521
-  - enabled: 1
-    path: Assets/FPS/Scenes/MainScene.unity
-    guid: d794a2ef8ba31d847ad3c19d03e2ddb9
+    path: Assets/Game_220913/Resources/Scene/Maze.unity
+    guid: cf42f78e7178c854bbe7a15651f2b496
+  - enabled: 0
+    path: Assets/Resources/Scenes/33 Loading.unity
+    guid: accc31e320ceb9a458eb00decc15dd32
+  - enabled: 0
+    path: Assets/Resources/Scenes/Mechanim_IK.unity
+    guid: b84d5d7afe8768b49ae1d1343879764b
+  - enabled: 0
+    path: Assets/Resources/Scenes/22 GameTitle.unity
+    guid: 6e241c9ad4f8f404cab4b2c748864ddc
+  - enabled: 0
+    path: Assets/Resources/Scenes/05 flappyBird.unity
+    guid: 91c7e442f77b5ac4cb6586cb5c143053
+  - enabled: 0
+    path: Assets/Resources/Scenes/05 FlappyBird 1.unity
+    guid: 8d1d787e6a5c5154e81118f23440df57
   m_configObjects: {}

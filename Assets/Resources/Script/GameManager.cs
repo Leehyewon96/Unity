@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement; // << : 
 
 
@@ -26,6 +28,8 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject); //현재 오브젝트 삭제 못하게 함
     }
 
+    public string NextSceneName;
+
     public void ChangeScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
@@ -36,7 +40,7 @@ public class GameManager : MonoBehaviour
     public string userID = "";
     public double lifeGuage = 100;
     public double attackGuage = 0;
-    public int gameState = 0; // 게임 로딩 0, 게임중 1, 일시정지 2, 게임오버 3
+    public int gameState = 0; // 접속중 -1, 게임 로딩 0, 게임중 1, 일시정지 2, 게임오버 3
     public int cash = 0;
     public int item_num = 0;
     public int item_num_enemy = 0;
@@ -44,6 +48,8 @@ public class GameManager : MonoBehaviour
     public bool fire = false;
     public float StageGuage = 0;
     public bool Key = false;
+    public Vector3 init_playerPos;
+    public Vector3 init_enemyPos;
 
     public float BGM_Volume = 1.0f;
     public float UI_Volume = 1.0f;

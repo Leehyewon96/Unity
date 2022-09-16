@@ -5,12 +5,15 @@ using UnityEngine.UI;
 
 public class LogIn : MonoBehaviour
 {
-    public Text Input = null;
+    Text titleText;
+    public InputField inputText;
+
+    public GameObject DefaultUI = null;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        titleText = gameObject.GetComponentInChildren<Text>() as Text;
     }
 
     // Update is called once per frame
@@ -19,8 +22,34 @@ public class LogIn : MonoBehaviour
         
     }
 
-    void EnterGame()
+    void onClickOK()
     {
-        GameManager.Instance.userID = Input.text;
+        this.gameObject.SetActive(false);
+        GameManager.Instance.gameState = 1; //∞‘¿”¡ﬂ
+        DefaultUI.SetActive(true);
+    }
+
+    void onTextChanged()
+    {
+        if (titleText != null)
+        {
+            if (inputText.text.Length <= 6)
+            {
+                titleText.text = inputText.text;
+                GameManager.Instance.userID = inputText.text;
+            }
+        }
+    }
+
+    void onTextEditEnd()
+    {
+        if (titleText != null)
+        {
+            if (inputText.text.Length <= 6)
+            {
+                titleText.text = inputText.text;
+                GameManager.Instance.userID = inputText.text;
+            }
+        }
     }
 }
